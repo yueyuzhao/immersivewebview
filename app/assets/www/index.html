@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<head>
+    <title>Android WebView Immersive Flick</title>
+    <style type="text/css">
+    html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: yellow;
+    }
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
+    @keyframes color {
+      from {background-color: blue;}
+      to {background-color: yellow;}
+    }
+    #wrapper {
+        margin: 0;
+        background: black;
+        height: 500px;
+        overflow: hidden;
+    }
+    .sample {
+        display: block;
+        width: 100px;
+        background: red;
+        height: 100px;
+        margin: 100px auto;
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="sample">
+    </div>
+</div>
+</body>
+</html>

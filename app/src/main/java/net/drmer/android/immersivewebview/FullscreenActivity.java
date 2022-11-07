@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
+import android.webkit.WebView;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -70,6 +71,9 @@ public class FullscreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_fullscreen);
+
+        WebView web = findViewById(R.id.web);
+        web.loadUrl("file:///android_asset/www/index.html");
     }
 
     @Override
